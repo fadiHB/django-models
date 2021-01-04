@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block main %}
+<h1>welcome to my first blog</h1>
+<h2> list of posts </h2>
+<ul>
+    {% for post in object_list %}
+    <li> 
+
+    <a href='{% url "post_detail" post.pk %}' > title: {{ post.title }} </a>
+    <!-- <h3> author: {{ post.author }} </h3>
+    <h3> body: {{ post.body }} </h3> -->
+
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock main %}
